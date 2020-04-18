@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.menuItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //flex-direction: column;
+
+  font-family: 'El Messiri', sans-serif;
+
+  &__number {
+    font-size: 150px;
+  }
+
+  &__img {
+    width:180px;
+    height: 270px;
+
+    &_3 {
+      width:150px;
+      height: 150px;
+    }
+  }
+
+  &__text {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__letter {
+    width:23px;
+    height: 30px;
+
+    background-color: #f6ebe1;
+
+    margin: 2px;
+
+    &_inner {
+      width:21px;
+      height: 28px;
+
+      box-shadow: 1px 1px #dfd6cb;
+    }
+
+  }
+}
