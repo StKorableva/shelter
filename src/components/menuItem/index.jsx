@@ -25,9 +25,13 @@ export default function MenuItem(props) {
     return (
         <div className='container'>
             <div className ='menuItem'>
-                <div className='menuItem__number'>{number}</div>
+                <div className='menuItem__number'>
+                    {number}
+                </div>
                 <img className={classnames({'menuItem__img': true, 'menuItem__img_3': (item===3)})} src={img} alt='menu icon'/>
-                <span className='menuItem__text'>{renderText(text)}</span>
+                <span className='menuItem__text'>
+                    {renderText(text)}
+                </span>
             </div>
         </div>
     );

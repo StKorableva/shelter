@@ -1,23 +1,25 @@
 .container {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .menuItem {
   display: flex;
   justify-content: center;
   align-items: center;
-  //flex-direction: column;
+  flex-direction: column;
 
   font-family: 'El Messiri', sans-serif;
 
   &__number {
-    font-size: 150px;
+    font-size: 130px;
   }
 
   &__img {
     width:180px;
     height: 270px;
+
+    margin-top: -200px;
 
     &_3 {
       width:150px;
@@ -29,6 +31,8 @@
     font-size: 20px;
     text-transform: uppercase;
     font-weight: bold;
+
+    margin-top: 20px;
 
     display: flex;
     flex-direction: row;

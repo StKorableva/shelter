@@ -1,3 +1,41 @@
+:root {
+  --degree: 90deg;
+  --angle: 0deg;
+}
+
+@mixin on-circle($item-count, $circle-size, $item-size) {
+  position: relative;
+  width:  $circle-size;
+  height: $circle-size;
+  padding: 0;
+  border-radius: 50%;
+  list-style: none;
+
+  > * {
+    display: block;
+    position: absolute;
+    top:  50%;
+    left: 50%;
+    width:  $item-size;
+    height: $item-size;
+    margin: -($item-size / 2);
+
+    $angle: (360 / $item-count);
+    $rot: 0;
+
+    @for $i from 1 through $item-count {
+      &:nth-of-type(#{$i}) {
+        transform:
+                rotate($rot * 1deg)
+                translate($circle-size / 2)
+                rotate(90deg)
+      }
+
+      $rot: $rot + $angle;
+    }
+  }
+}
+
 .menu {
   height: 100vh;
   background-color: #e8d5bf;
@@ -20,4 +58,12 @@
 
     transform: translate(-50%, 0);
   }
+}
+
+.circle-container {
+  @include on-circle($item-count: 4, $circle-size: 500px, $item-size: 300px);
+  margin: 18em auto 0;
+  transform: translateY(50%) rotate(var(--degree)) rotate(var(--angle));
+  user-select: none;
+  transition: transform 1s linear;
 }
