@@ -6,17 +6,22 @@ const menuItemConfig = {
     1: {
         number: '01',
         img: CatImage,
-        text: 'cats'
+        text: 'one'
     },
     2: {
         number: '02',
         img: DogImage,
-        text: 'dogs'
+        text: 'two'
     },
     3: {
         number: '03',
         img: FestivalImage,
-        text: 'about'
+        text: 'three'
+    },
+    4: {
+        number: '03',
+        img: FestivalImage,
+        text: 'four'
     },
 };
 

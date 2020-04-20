@@ -1,5 +1,5 @@
 :root {
-  --degree: 90deg;
+  --degree: 0deg;
   --angle: 0deg;
 }
 
@@ -63,7 +63,7 @@
 .circle-container {
   @include on-circle($item-count: 4, $circle-size: 500px, $item-size: 300px);
   margin: 18em auto 0;
-  transform: translateY(50%) rotate(var(--degree)) rotate(var(--angle));
+  transform: translateY(50%) rotate(-90deg) rotate(var(--degree)) rotate(var(--angle));
   user-select: none;
   transition: transform 1s linear;
 }
