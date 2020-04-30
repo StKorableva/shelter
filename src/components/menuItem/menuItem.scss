@@ -1,6 +1,7 @@
 .container {
   display: flex;
   justify-content: center;
+
 }
 
 .menuItem {
@@ -17,14 +18,7 @@
 
   &__img {
     width:180px;
-    height: 270px;
-
     margin-top: -200px;
-
-    &_3 {
-      width:150px;
-      height: 150px;
-    }
   }
 
   &__text {
@@ -38,6 +32,11 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
+    position: absolute;
+    bottom: -20px;
+    opacity: 0;
+    transition: opacity 0.3s 0.3s  ease;
   }
 
   &__letter {
@@ -56,4 +55,11 @@
     }
 
   }
+
+  &.active {
+    .menuItem__text {
+      opacity: 1;
+    }
+  }
+
 }
